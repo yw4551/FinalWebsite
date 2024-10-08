@@ -88,3 +88,13 @@ function prevImage() {
     fullScreenVideo.src = galleryVideos[currentVideoIndex].src;
     fullScreenVideo.play();
   }
+  
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_aynu99s', 'template_y0s6upe', this)
+        .then(function() {
+            alert('Message sent successfully!');
+        }, function(error) {
+            alert('Failed to send message: ' + error.text);
+        });
+});
