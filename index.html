@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Sofadi+One&display=swap">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("ww6gGboduUMAMQTwN");
+    })();
+</script>
 </head>
 
 <body>
@@ -189,17 +195,20 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mlderakw" method="POST">
+    <form id="contact-form">
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="user_name" required>
 
       <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" required>
+      <input type="tel" id="phone" name="user_phone" required>
+        
+      <label for="email">Email</label>
+      <input type="email" id="email" name="user_email" required>
 
       <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <textarea id="message" name="user_message" rows="4" required></textarea>
 
-      <button type="submit" value="send">Send</button>
+      <button type="submit">Send</button>
     </form>
   </section>
 
